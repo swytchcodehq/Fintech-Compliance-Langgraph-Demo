@@ -11,7 +11,20 @@ Built with [LangGraph](https://github.com/langchain-ai/langgraph) and [Swytchcod
 
 ---
 
-## Setup
+## Prerequisites
+
+- **Python 3.9+**
+- **Swytchcode CLI.** Install with the verified script for your platform:
+
+  Linux / macOS:
+  ```bash
+  curl -fsSL https://cli.swytchcode.com/install.sh | sh
+  ```
+  Windows (PowerShell):
+  ```powershell
+  irm https://cli.swytchcode.com/install.ps1 | iex
+  ```
+
 
 ```bash
 # 1. Install dependencies
