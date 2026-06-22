@@ -2663,7 +2663,7 @@ METHODS:
         STATUS: 500
         WHEN: Error response. (HTTP default)
     CANONICAL_ID: item.remove.create
-  accounts.get.create:
+  plaid.account.get:
     SUMMARY: Retrieve accounts
     DESC: |-
       The `/accounts/get` endpoint can be used to retrieve a list of accounts associated with any linked Item. Plaid will only return active bank accounts — that is, accounts that are not closed and are capable of carrying a balance.
@@ -2715,7 +2715,7 @@ METHODS:
       - TYPE: STRUCT(PlaidError)
         STATUS: 500
         WHEN: Error response. (HTTP default)
-    CANONICAL_ID: accounts.get.create
+    CANONICAL_ID: plaid.account.get
   categories.get.create:
     SUMMARY: (Deprecated) Get legacy categories
     DESC: |-
@@ -2792,7 +2792,7 @@ METHODS:
         STATUS: 500
         WHEN: Error response. (HTTP default)
     CANONICAL_ID: sandbox.processor_token.create
-  sandbox.public_token.create:
+  plaid.sandbox.publicToken.create:
     SUMMARY: Create a test Item
     DESC: Use the `/sandbox/public_token/create` endpoint to create a valid `public_token`  for an arbitrary institution ID, initial products, and test credentials. The created `public_token` maps to a new Sandbox Item. You can then call `/item/public_token/exchange` to exchange the `public_token` for an `access_token` and perform all API actions. `/sandbox/public_token/create` can also be used with the [`user_custom` test username](https://plaid.com/docs/sandbox/user-custom) to generate a test account with custom data, or with Plaid's [pre-populated Sandbox test accounts](https://plaid.com/docs/sandbox/test-credentials/).
     HTTP:
@@ -2838,7 +2838,7 @@ METHODS:
       - TYPE: STRUCT(PlaidError)
         STATUS: 500
         WHEN: Error response. (HTTP default)
-    CANONICAL_ID: sandbox.public_token.create
+    CANONICAL_ID: plaid.sandbox.publicToken.create
   sandbox.item.fireWebhook.create:
     SUMMARY: Fire a test webhook
     DESC: |-
@@ -6098,7 +6098,7 @@ METHODS:
         STATUS: 500
         WHEN: Error response (HTTP default)
     CANONICAL_ID: sandbox.user.resetLogin.create
-  item.public_token.exchange.create:
+  plaid.item.exchange.create:
     SUMMARY: Exchange public token for an access token
     DESC: |-
       Exchange a Link `public_token` for an API `access_token`. Link hands off the `public_token` client-side via the `onSuccess` callback once a user has successfully created an Item. The `public_token` is ephemeral and expires after 30 minutes. An `access_token` does not expire, but can be revoked by calling `/item/remove`.
@@ -6147,7 +6147,7 @@ METHODS:
       - TYPE: STRUCT(PlaidError)
         STATUS: 500
         WHEN: Error response (HTTP default)
-    CANONICAL_ID: item.public_token.exchange.create
+    CANONICAL_ID: plaid.item.exchange.create
   item.public_token.create:
     SUMMARY: Create public token
     DESC: |-

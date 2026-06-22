@@ -3825,7 +3825,7 @@ METHODS:
         STATUS: 429
         WHEN: Client error (HTTP 429)
     CANONICAL_ID: inquiries.inquiry.list
-  inquiries.inquiry.create:
+  persona.inquiry.create:
     SUMMARY: Create an Inquiry
     DESC: |-
       Creates a new inquiry with optional pre-filled attributes.
@@ -3899,7 +3899,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 429
         WHEN: Client error (HTTP 429)
-    CANONICAL_ID: inquiries.inquiry.create
+    CANONICAL_ID: persona.inquiry.create
   inquiries.inquiry.delete:
     SUMMARY: Redact an Inquiry
     DESC: |-
@@ -3971,7 +3971,7 @@ METHODS:
         STATUS: 429
         WHEN: Client error (HTTP 429)
     CANONICAL_ID: inquiries.inquiry.delete
-  inquiries.inquiry.get:
+  persona.inquiry.get:
     SUMMARY: Retrieve an Inquiry
     DESC: |-
       Retrieves the details of an existing Inquiry.
@@ -4037,7 +4037,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 429
         WHEN: Client error (HTTP 429)
-    CANONICAL_ID: inquiries.inquiry.get
+    CANONICAL_ID: persona.inquiry.get
   inquiries.inquiry.update:
     SUMMARY: Update an Inquiry
     DESC: |-
@@ -4187,7 +4187,7 @@ METHODS:
         STATUS: 429
         WHEN: Client error (HTTP 429)
     CANONICAL_ID: inquiries.add-tag.create
-  inquiries.approve.create:
+  persona.inquiry.approve:
     SUMMARY: Approve an Inquiry
     DESC: |-
       Approves an Inquiry.
@@ -4260,7 +4260,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 429
         WHEN: Client error (HTTP 429)
-    CANONICAL_ID: inquiries.approve.create
+    CANONICAL_ID: persona.inquiry.approve
   inquiries.decline.create:
     SUMMARY: Decline an Inquiry
     DESC: |-
@@ -4831,7 +4831,7 @@ METHODS:
         STATUS: 429
         WHEN: Client error (HTTP 429)
     CANONICAL_ID: inquiries.set-tag.create
-  inquiries.perform-simulate-action.create:
+  persona.inquiry.performSimulateActions.create:
     SUMMARY: Perform Simulate Actions
     DESC: Performs a series of simulated actions on a Sandbox Inquiry.
     HTTP:
@@ -4905,7 +4905,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 429
         WHEN: Client error (HTTP 429)
-    CANONICAL_ID: inquiries.perform-simulate-action.create
+    CANONICAL_ID: persona.inquiry.performSimulateActions.create
   inquiry-sessions.inquiry-session.list:
     SUMMARY: List all Inquiry Sessions
     DESC: Retrieves a list of Inquiry Sessions. Results are returned in reverse chronological order, with the most recently created objects first.

@@ -20,8 +20,7 @@ pip install -r requirements.txt
 # 2. Copy and fill in your API keys
 cp .env.example .env
 
-# 3. Fetch all integrations
-swytchcode bootstrap
+
 ```
 
 ## Run

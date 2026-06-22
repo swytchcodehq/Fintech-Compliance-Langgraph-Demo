@@ -3,7 +3,7 @@ DEFAULTS:
   bearer_token: BEARER <ACCESS_TOKEN>
   w_base_url: https://api.dwolla.com
 METHODS:
-  token.token.create:
+  dwolla.token.create:
     SUMMARY: Create an application access token
     DESC: Generate an application access token using OAuth 2.0 client credentials flow for server-to-server authentication. Requires client ID and secret sent via Basic authentication header with grant_type=client_credentials in the request body. Returns a bearer access token with expiration time for authenticating API requests scoped to your application. Essential for secure API access.
     HTTP:
@@ -33,7 +33,7 @@ METHODS:
       - TYPE: STRUCT(Error401)
         STATUS: 401
         WHEN: Unauthorized (HTTP 401)
-    CANONICAL_ID: token.token.create
+    CANONICAL_ID: dwolla.token.create
   api.resource.execute:
     SUMMARY: root
     DESC: Retrieve the API root entry point to discover available resources and endpoints based on your OAuth access token permissions. Returns HAL+JSON with navigation links to accessible resources including accounts, customers, events, and webhook subscriptions depending on token scope. Essential for API exploration, dynamic resource discovery, and building adaptive client applications that respond to available permissions.
@@ -310,7 +310,7 @@ METHODS:
         STATUS: 404
         WHEN: not found (HTTP 404)
     CANONICAL_ID: accounts.mass-payment.get
-  customers.customer.list:
+  dwolla.customer.list:
     SUMMARY: List and search customers
     DESC: Returns a paginated list of customers sorted by creation date. Supports fuzzy search across customer names, business names, and email addresses, plus exact filtering by email and verification status. Default limit is 25 customers per page, maximum 200.
     HTTP:
@@ -357,8 +357,8 @@ METHODS:
       - TYPE: ANY
         STATUS: 403
         WHEN: Forbidden (HTTP 403)
-    CANONICAL_ID: customers.customer.list
-  customers.customer.create:
+    CANONICAL_ID: dwolla.customer.list
+  dwolla.customer.create:
     SUMMARY: Create a customer
     DESC: Creates a new customer with different verification levels and capabilities. Supports personal verified customers (individuals), business verified customers (businesses), unverified customers, and receive-only users. Customer type determines transaction limits, verification requirements, and available features.
     HTTP:
@@ -392,7 +392,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 404
         WHEN: not found (HTTP 404)
-    CANONICAL_ID: customers.customer.create
+    CANONICAL_ID: dwolla.customer.create
   customers.customer.get:
     SUMMARY: Retrieve a customer
     DESC: Retrieve identifying information for a specific customer. The returned data varies by customer type - verified customers include contact details, address information, and verification status, while unverified customers and receive-only users contain basic contact information only.
@@ -474,7 +474,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 403
         WHEN: forbidden (HTTP 403)
-    CANONICAL_ID: customers.customer.create_6099
+    CANONICAL_ID: dwolla.customer.create_6099
   business-classifications.business-classification.list:
     SUMMARY: List business classifications
     DESC: Returns a directory of business and industry classifications required for creating business verified customers. Each business classification contains multiple industry classifications. The industry classification ID must be provided in the businessClassification parameter during business customer creation for verification.
@@ -1191,7 +1191,7 @@ METHODS:
         STATUS: 404
         WHEN: not found (HTTP 404)
     CANONICAL_ID: customers.funding-source.get
-  customers.funding-source.create:
+  dwolla.customer.fundingSources.create:
     SUMMARY: Create customer funding source
     DESC: Creates a bank account or debit card funding source for a customer. Supports multiple methods including manual entry with routing/account numbers, instant verification using existing open banking connections, debit card addition via Exchange, and virtual account numbers. Bank funding sources require verification before transfers can be initiated.
     HTTP:
@@ -1228,7 +1228,7 @@ METHODS:
       - TYPE: ANY
         STATUS: 404
         WHEN: not found (HTTP 404)
-    CANONICAL_ID: customers.funding-source.create
+    CANONICAL_ID: dwolla.customer.fundingSources.create
   funding-sources.funding-source.get:
     SUMMARY: Retrieve a funding source
     DESC: Returns detailed information for a specific funding source, including its type, status, and verification details. Supports bank accounts (via Open Banking), debit card funding sources, and Dwolla balance (verified customers only). Debit card funding sources include masked card details such as brand, last four digits, expiration date, and cardholder name.

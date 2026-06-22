@@ -1,9 +1,9 @@
 {
   "integrations": {
-    "plaid.plaid": {
-      "version": "2020-09-14_1.682.2"
+    "plaid.plaid_api": {
+      "version": "2020-09-14 1.682.2"
     },
-    "persona.persona": {
+    "persona.persona_api": {
       "version": "2025-12-08"
     },
     "dwolla.dwolla_api": {
@@ -12,7 +12,7 @@
   },
   "mode": "sandbox",
   "tools": {
-    "sandbox.public_token.create": {
+    "plaid.sandbox.publicToken.create": {
       "desc": "Create a test Item in Plaid Sandbox",
       "inputs": [
         {
@@ -50,7 +50,7 @@
       "summary": "Create a test Item",
       "type": "method"
     },
-    "item.public_token.exchange.create": {
+    "plaid.item.exchange.create": {
       "desc": "Exchange public token for an access token",
       "inputs": [
         {
@@ -88,7 +88,7 @@
       "summary": "Exchange public token for an access token",
       "type": "method"
     },
-    "accounts.get.create": {
+    "plaid.account.get": {
       "desc": "Retrieve accounts associated with an Item",
       "inputs": [
         {
@@ -126,7 +126,7 @@
       "summary": "Retrieve accounts",
       "type": "method"
     },
-    "inquiries.approve.create": {
+    "persona.inquiry.approve": {
       "desc": "Directly approve a Persona inquiry (sandbox)",
       "inputs": [
         {
@@ -157,7 +157,7 @@
       "summary": "Approve an Inquiry",
       "type": "method"
     },
-    "inquiries.inquiry.create": {
+    "persona.inquiry.create": {
       "desc": "Create a new Persona inquiry",
       "inputs": [
         {
@@ -188,7 +188,7 @@
       "summary": "Create an Inquiry",
       "type": "method"
     },
-    "inquiries.perform-simulate-action.create": {
+    "persona.inquiry.performSimulateActions.create": {
       "desc": "Perform simulated actions on a Sandbox Inquiry",
       "inputs": [
         {
@@ -226,7 +226,7 @@
       "summary": "Perform Simulate Actions",
       "type": "method"
     },
-    "inquiries.inquiry.get": {
+    "persona.inquiry.get": {
       "desc": "Retrieve an existing Persona inquiry",
       "inputs": [
         {
@@ -257,7 +257,7 @@
       "summary": "Retrieve an Inquiry",
       "type": "method"
     },
-    "token.token.create": {
+    "dwolla.token.create": {
       "desc": "Create Dwolla OAuth application access token",
       "inputs": [
         {
@@ -281,7 +281,7 @@
       "summary": "Create an application access token",
       "type": "method"
     },
-    "customers.customer.create": {
+    "dwolla.customer.create": {
       "desc": "Create a Dwolla customer",
       "inputs": [
         {
@@ -312,7 +312,7 @@
       "summary": "Create a customer",
       "type": "method"
     },
-    "customers.customer.list": {
+    "dwolla.customer.list": {
       "desc": "List and search Dwolla customers",
       "inputs": [
         {
@@ -343,7 +343,7 @@
       "summary": "List and search customers",
       "type": "method"
     },
-    "customers.funding-source.create": {
+    "dwolla.customer.fundingSources.create": {
       "desc": "Create a bank funding source for a Dwolla customer",
       "inputs": [
         {
