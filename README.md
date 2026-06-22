@@ -33,10 +33,6 @@ Built with [LangGraph](https://github.com/langchain-ai/langgraph) and [Swytchcod
    ```bash
    cp .env.example .env
    ```
-4. Fetch the integrations declared in `.swytchcode/tooling.json`:
-   ```bash
-   swytchcode bootstrap
-   ```
 ## Run
 
 ```bash
@@ -59,3 +55,17 @@ python main.py
 | Plaid | `plaid.item.exchange.create` |
 | Plaid | `plaid.sandbox.publicToken.create` |
 
+## Part of the Swytchcode demo collection
+
+Runnable LangGraph + Swytchcode examples:
+
+- [Bug-Escalation-Langgraph](https://github.com/swytchcodehq/Bug-Escalation-Langgraph)
+- [Create-And-Send-Payment-Langgraph](https://github.com/swytchcodehq/Create-And-Send-Payment-Langgraph)
+- [Customer-Onboarding-Langgraph](https://github.com/swytchcodehq/Customer-Onboarding-Langgraph)
+- [Fintech-Compliance-Langgraph-Demo](https://github.com/swytchcodehq/Fintech-Compliance-Langgraph-Demo)
+- [Lead-Qualification-Langgraph](https://github.com/swytchcodehq/Lead-Qualification-Langgraph)
+- [Weekly-Reporting-Langgraph](https://github.com/swytchcodehq/Weekly-Reporting-Langgraph)
+
+## License
+
+MIT. See [LICENSE](LICENSE).
