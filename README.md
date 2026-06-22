@@ -14,28 +14,29 @@ Built with [LangGraph](https://github.com/langchain-ai/langgraph) and [Swytchcod
 ## Prerequisites
 
 - **Python 3.9+**
-- **Swytchcode CLI.** Install with the verified script for your platform:
+- **Swytchcode CLI:** install with the verified script for your platform:
+  
+  npm install -g swytchcode
 
-  Linux / macOS:
-  ```bash
-  curl -fsSL https://cli.swytchcode.com/install.sh | sh
-  ```
-  Windows (PowerShell):
-  ```powershell
-  irm https://cli.swytchcode.com/install.ps1 | iex
-  ```
+## Setup
 
-
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Copy and fill in your API keys
-cp .env.example .env
-
-
-```
-
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/swytchcodehq/Fintech-Compliance-Langgraph-Demo.git
+   cd Fintech-Compliance-Langgraph-Demo
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Copy the example env file and fill in your keys:
+   ```bash
+   cp .env.example .env
+   ```
+4. Fetch the integrations declared in `.swytchcode/tooling.json`:
+   ```bash
+   swytchcode bootstrap
+   ```
 ## Run
 
 ```bash
