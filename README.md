@@ -45,14 +45,17 @@ python main.py
 
 ## Canonical IDs Used
 
-| Service | Canonical ID                              |
-|---------|-------------------------------------------|
-| Plaid   | `sandbox.public_token.create`             |
-| Plaid   | `item.public_token.exchange.create`       |
-| Plaid   | `accounts.get.create`                     |
-| Persona | `inquiries.inquiry.create`                |
-| Persona | `inquiries.approve.create`                |
-| Persona | `inquiries.inquiry.get`                   |
-| Dwolla  | `customers.customer.create`               |
-| Dwolla  | `customers.customer.list`                 |
-| Dwolla  | `customers.funding-source.create`         |
+| Service | Canonical ID |
+|---------|--------------|
+| Dwolla | `dwolla.customer.create` |
+| Dwolla | `dwolla.customer.fundingSources.create` |
+| Dwolla | `dwolla.customer.list` |
+| Dwolla | `dwolla.token.create` |
+| Persona | `persona.inquiry.approve` |
+| Persona | `persona.inquiry.create` |
+| Persona | `persona.inquiry.get` |
+| Persona | `persona.inquiry.performSimulateActions.create` |
+| Plaid | `plaid.account.get` |
+| Plaid | `plaid.item.exchange.create` |
+| Plaid | `plaid.sandbox.publicToken.create` |
+
